@@ -1,0 +1,13 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "lib": [
+      "ES2015"
+    ],
+    "sourceMap": true,
+    "inlineSources": true
+  },
+  "include": [
+    "*.ts"
+  ]
+}

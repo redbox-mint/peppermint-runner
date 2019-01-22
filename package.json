@@ -1,0 +1,21 @@
+{
+  "name": "peppermint-runner",
+  "version": "1.0.0",
+  "description": "Source of truth integrator for Peppermint",
+  "main": "index.js",
+  "repository": "https://github.com/redbox-mint/peppermint-runner.git",
+  "author": "Shilo Banihit",
+  "license": "MIT",
+  "scripts": {
+    "compile": "node_modules/.bin/tsc --project tsconfig.json"
+  },
+  "dependencies": {
+    "@types/node": "^10.12.18",
+    "axios": "^0.18.0",
+    "lodash": "^4.17.11",
+    "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "typescript": "3.2.4"
+  }
+}
