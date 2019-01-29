@@ -20,6 +20,7 @@ async function crawlFileSystem(configJson) : Promise<void> {
         if (fs.existsSync(entryPath)) {
           const entryJson = require(entryPath);
           requestData.records.push(entryJson);
+          console.log(`Added: ${entryPath}`)
         } else {
           console.error(`CATALOG.json missing: ${entryPath}`);
         }
@@ -40,10 +41,10 @@ async function crawlFileSystem(configJson) : Promise<void> {
         _.each(response.data.results, (result:any, index:any) => {
           let hasFailed: boolean = false;
           _.forOwn(result.scripts, (scriptRes:any, scriptName: string) => {
-            if (!scriptRes) {
+            if (!scriptRes.success) {
               console.error(`Failed to run script: ${scriptName}`);
               console.error(`Record:`);
-              console.error(JSON.stringify(requestData[index]));
+              console.error(JSON.stringify(requestData.records[index]));
               hasFailed = true;
             }
           });
