@@ -1,1 +1,1 @@
-* * * * * root cd /opt/peppermint-runner; /usr/local/bin/node index.js --config ./config.json >> /var/log/cron.log 2>&1
+* * * * * root cd /opt/peppermint-runner; /usr/local/bin/node index.js --config ./config.json >> /var/log/peppermint/runner-cron.log 2>&1

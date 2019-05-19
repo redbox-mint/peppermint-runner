@@ -10,6 +10,8 @@ RUN cd $APP_HOME && yarn install && npm run-script compile && chmod +x docker-wr
 RUN apt-get update
 RUN apt-get -y install cron
 
+RUN mkdir -p /var/log/peppermint
+
 WORKDIR $APP_HOME
 ENTRYPOINT ["sh", "-c"]
 CMD ["exec ./docker-wrapper.sh"]
