@@ -6,6 +6,12 @@ Source of truth integrator for [Peppermint](https://github.com/redbox-mint/peppe
 
 See [Peppermint](https://github.com/redbox-mint/peppermint).
 
+The runner will crawl a directory and send CATALOG.json files to Peppermint. The script has been updated to:
+
+- ensure one process runs: the script will create a run flag file, that will delete after it executes
+- remembers which entry has been processed: it will create a empty file in the tracking directory that indicates the entry had been processed. To reprocess a record, delete the corresponding tracking file.
+- send records in batches. See config file. 
+
 ## Running
 
 ### Quick set up
